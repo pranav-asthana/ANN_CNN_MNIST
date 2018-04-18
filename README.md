@@ -1,5 +1,5 @@
-Machine Learning 2 Assignment 3
+## Machine Learning 2 Assignment 3
 
-1. ANN 
+#### 1. ANN 
 
-2. CNN
+#### 2. CNN
