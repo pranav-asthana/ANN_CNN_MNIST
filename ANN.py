@@ -9,9 +9,10 @@ from keras.utils import np_utils
 seed = 7
 numpy.random.seed(seed)
 
-# load data
+# load data - try to do using dataset
 (X_train, y_train), (X_test, y_test) = mnist.load_data()
 
+print(type(X_train))
 # flatten 28*28 images to a 784 vector for each image
 num_pixels = X_train.shape[1] * X_train.shape[2]
 X_train = X_train.reshape(X_train.shape[0], num_pixels).astype('float32')
@@ -31,6 +32,10 @@ def baseline_model():
 	# create model
 	model = Sequential()
 	model.add(Dense(num_pixels, input_dim=num_pixels, kernel_initializer='normal', activation='relu'))
+	# 2nd hidden layer
+	# model.add(Dense(50, kernel_initializer='normal', activation='relu'))
+	# 3rd hidden layer
+	# model.add(Dense(20, kernel_initializer='normal', activation='relu'))
 	model.add(Dense(num_classes, kernel_initializer='normal', activation='softmax'))
 	# Compile model
 	model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
