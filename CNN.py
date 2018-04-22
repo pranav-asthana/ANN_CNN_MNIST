@@ -8,6 +8,7 @@ from keras.layers.convolutional import Conv2D
 from keras.layers.convolutional import MaxPooling2D
 from keras.utils import np_utils
 from keras import backend as K
+import math
 
 # Keras backend is handled by Theano for this (why?)
 K.set_image_dim_ordering('th')
@@ -20,7 +21,7 @@ numpy.random.seed(seed)
 # TODO: using dataset (get into a numpy.ndarray)
 (X_train, y_train), (X_test, y_test) = mnist.load_data()
 
-# Reshape to be [samples][pixels][width][height] (!)
+# Reshape to be [samples][pixels][width][height]
 # The layers used for two-dimensional convolutions expect pixel values 
 # with the dimensions [pixels][width][height]
 # Pixels = 1 for MNIST because grayscale images
@@ -76,10 +77,11 @@ def baseline_model():
 model = baseline_model()
 
 # Fit the model
-# Given data, labels, validation_data, number of iterations, verbose output lines
+# Given data, labels, validation_split (fraction of training data for validation), 
+# number of iterations, verbose output lines
 old_validation_error = math.inf
 for i in range(4000):
-	value = model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=1, batch_size=200, verbose=2)
+	value = model.fit(X_train, y_train, validation_split=0.166, epochs=1, batch_size=200, verbose=2)
 	validation_error = value.history['val_loss'][0]
 	if (validation_error - old_validation_error) > (0.01*old_validation_error):
 		break
@@ -90,5 +92,5 @@ for i in range(4000):
 scores = model.evaluate(X_test, y_test, verbose=0)
 
 # Calculate the accuracy and baseline error of the model
-print("Accuracy over test set: %.2f%%" % scores[1]*100)
+print("Accuracy over test set: %.2f%%" % (scores[1]*100))
 print("Baseline Error: %.2f%%" % (100-scores[1]*100))

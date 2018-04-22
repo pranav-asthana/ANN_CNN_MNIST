@@ -18,11 +18,3 @@ Used the ReLU activation function over sigmoid and tanh for the hidden layers, s
 
 
 See `Report.txt` for further results. 
-
-- Understand the CNN functions
-- Understand modfications of vectors (6)
-- How many hidden layer units
-- Activation function
-- How to experiment with 3-5 layers within the code
-- Output actual number of training iterations (1)
-- Report with accuracy (5)

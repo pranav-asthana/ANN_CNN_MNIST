@@ -10,6 +10,7 @@ Anushree Surendra Hede (2015A7PS0958H)
 Pranav Kumar Asthana (2015A7PS0958H)
 
 DATASET
+The MNIST database 3 of handwritten digits. Each image is a 28*28 square consisting of integers in range 0-255. Pixel values are rescaled to range 0-1.
 
 RESULTS 
 
@@ -29,3 +30,23 @@ Test error rate: 2.19%
 
 (ii) Convolutional Neural Network
 
+3 layer 
+32 feature maps of size 5*5
+Pooling layer of size 2*2 
+Accuracy:
+Test error rate: 
+
+4 layer 
+32 feature maps of size 5*5
+15 feature maps of size 3*3
+Pooling layers of size 2*2
+Accuracy:
+Test error rate:
+
+5 layer 
+32 feature maps of size 5*5
+15 feature maps of size 3*3
+5 feature maps of size 2*2
+Pooling layers of size 2*2
+Accuracy:
+Test error rate:
