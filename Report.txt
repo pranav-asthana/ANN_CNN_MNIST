@@ -1,0 +1,31 @@
+CS F441
+SELECTED TOPICS FROM COMPUTER SCIENCE
+Assignment 3: Neural Network - Simple and Convolutional 
+REPORT
+
+GROUP MEMBERS
+
+Sahil Sangwan (2015A7PS0958H)
+Anushree Surendra Hede (2015A7PS0958H)
+Pranav Kumar Asthana (2015A7PS0958H)
+
+DATASET
+
+RESULTS 
+
+(i) Simple Neural Network
+
+3 layer (800 hidden layer units)
+Accuracy: 98.22%
+Test error rate: 1.78%
+
+4 layer (800+100 hidden layer units)
+Accuracy: 98.03%
+Test error rate: 1.97%
+
+5 layer (800+100+20 hidden layer units)
+Accuracy: 97.81%
+Test error rate: 2.19%
+
+(ii) Convolutional Neural Network
+
