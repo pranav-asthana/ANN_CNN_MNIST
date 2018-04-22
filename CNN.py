@@ -17,12 +17,12 @@ K.set_image_dim_ordering('th')
 seed = 7
 numpy.random.seed(seed)
 
-# Load data 
+# Load data
 # TODO: using dataset (get into a numpy.ndarray)
 (X_train, y_train), (X_test, y_test) = mnist.load_data()
 
 # Reshape to be [samples][pixels][width][height]
-# The layers used for two-dimensional convolutions expect pixel values 
+# The layers used for two-dimensional convolutions expect pixel values
 # with the dimensions [pixels][width][height]
 # Pixels = 1 for MNIST because grayscale images
 # 28*28 images size
@@ -33,7 +33,7 @@ X_test = X_test.reshape(X_test.shape[0], 1, 28, 28).astype('float32')
 X_train = X_train / 255
 X_test = X_test / 255
 
-# One hot encode outputs - convert the labels to categorical 
+# One hot encode outputs - convert the labels to categorical
 y_train = np_utils.to_categorical(y_train)
 y_test = np_utils.to_categorical(y_test)
 num_classes = y_test.shape[1]
@@ -48,15 +48,15 @@ def baseline_model():
 	# Pooling layer of size 2*2
 	model.add(MaxPooling2D(pool_size=(2, 2)))
 
-	# # Second hidden layer. 15 feature maps of size 3*3. Activation function is ReLU.
-	# model.add(Conv2D(15, (3, 3), activation='relu'))
-	# # Pooling layer of size 2*2
-	# model.add(MaxPooling2D(pool_size=(2, 2)))
+	# Second hidden layer. 15 feature maps of size 3*3. Activation function is ReLU.
+	model.add(Conv2D(15, (3, 3), activation='relu'))
+	# Pooling layer of size 2*2
+	model.add(MaxPooling2D(pool_size=(2, 2)))
 
-	# # Third hidden layer. 5 feature maps of size 2*2. Activation function is ReLU.
-	# model.add(Conv2D(5, (2, 2), iactivation='relu'))
-	# # Pooling layer of size 2*2
-	# model.add(MaxPooling2D(pool_size=(2, 2)))
+	# Third hidden layer. 5 feature maps of size 2*2. Activation function is ReLU.
+	model.add(Conv2D(5, (2, 2), activation='relu'))
+	# Pooling layer of size 2*2
+	model.add(MaxPooling2D(pool_size=(2, 2)))
 
 	# Regularization layer. Randomly excludes 20% of neurons in the layer to reduce overfitting
 	model.add(Dropout(0.2))
@@ -77,7 +77,7 @@ def baseline_model():
 model = baseline_model()
 
 # Fit the model
-# Given data, labels, validation_split (fraction of training data for validation), 
+# Given data, labels, validation_split (fraction of training data for validation),
 # number of iterations, verbose output lines
 old_validation_error = math.inf
 for i in range(4000):
