@@ -1,6 +1,6 @@
 CS F441
 SELECTED TOPICS FROM COMPUTER SCIENCE
-Assignment 3: Neural Network - Simple and Convolutional 
+Assignment 3: Neural Network - Simple and Convolutional
 REPORT
 
 GROUP MEMBERS
@@ -12,17 +12,20 @@ Pranav Kumar Asthana (2015A7PS0958H)
 DATASET
 The MNIST database 3 of handwritten digits. Each image is a 28*28 square consisting of integers in range 0-255. Pixel values are rescaled to range 0-1.
 
-RESULTS 
+RESULTS
 
 (i) Simple Neural Network
 
 3 layer (800 hidden layer units)
+
 Accuracy: 98.01%
 Test error rate: 1.99%
+
 
 4 layer (800+100 hidden layer units)
 Accuracy: 97.72%
 Test error rate: 2.28%
+
 
 5 layer (800+100+20 hidden layer units)
 Accuracy: 97.52%
@@ -30,23 +33,29 @@ Test error rate: 2.48%
 
 (ii) Convolutional Neural Network
 
-3 layer 
+3 layer
 32 feature maps of size 5*5
 Pooling layer of size 2*2 
+
 Accuracy: 98.87%
 Test error rate: 1.13% 
 
-4 layer 
+
+4 layer
 32 feature maps of size 5*5
 15 feature maps of size 3*3
 Pooling layers of size 2*2
+
 Accuracy: 98.86%
 Test error rate: 1.14%
 
-5 layer 
+
+5 layer
 32 feature maps of size 5*5
 15 feature maps of size 3*3
 5 feature maps of size 2*2
 Pooling layers of size 2*2
+
 Accuracy: 96.95%
 Test error rate: 3.05%
+
