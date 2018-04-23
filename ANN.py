@@ -38,11 +38,11 @@ def baseline_model():
 	# Activation function h(a) is the ReLU function 
 	model.add(Dense(800, input_dim=num_pixels, kernel_initializer='normal', activation='relu'))
 
-	# # 2nd hidden layer (100 HU)
-	# model.add(Dense(100, kernel_initializer='normal', activation='relu'))
+	# 2nd hidden layer (100 HU)
+	model.add(Dense(100, kernel_initializer='normal', activation='relu'))
 
-	# # 3rd hidden layer (20 HU)
-	# model.add(Dense(20, kernel_initializer='normal', activation='relu'))
+	# 3rd hidden layer (20 HU)
+	model.add(Dense(20, kernel_initializer='normal', activation='relu'))
 
 	# Add the output layer with the number of output units (classes)
 	# Activation function is softmax (for probability-like classification)

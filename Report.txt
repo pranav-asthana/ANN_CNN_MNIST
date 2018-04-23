@@ -17,36 +17,36 @@ RESULTS
 (i) Simple Neural Network
 
 3 layer (800 hidden layer units)
-Accuracy: 98.22%
-Test error rate: 1.78%
+Accuracy: 98.01%
+Test error rate: 1.99%
 
 4 layer (800+100 hidden layer units)
-Accuracy: 98.03%
-Test error rate: 1.97%
+Accuracy: 97.72%
+Test error rate: 2.28%
 
 5 layer (800+100+20 hidden layer units)
-Accuracy: 97.81%
-Test error rate: 2.19%
+Accuracy: 97.52%
+Test error rate: 2.48%
 
 (ii) Convolutional Neural Network
 
 3 layer 
 32 feature maps of size 5*5
 Pooling layer of size 2*2 
-Accuracy:
-Test error rate: 
+Accuracy: 98.87%
+Test error rate: 1.13% 
 
 4 layer 
 32 feature maps of size 5*5
 15 feature maps of size 3*3
 Pooling layers of size 2*2
-Accuracy:
-Test error rate:
+Accuracy: 98.86%
+Test error rate: 1.14%
 
 5 layer 
 32 feature maps of size 5*5
 15 feature maps of size 3*3
 5 feature maps of size 2*2
 Pooling layers of size 2*2
-Accuracy:
-Test error rate:
+Accuracy: 96.95%
+Test error rate: 3.05%

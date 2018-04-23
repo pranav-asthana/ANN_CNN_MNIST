@@ -48,15 +48,15 @@ def baseline_model():
 	# Pooling layer of size 2*2
 	model.add(MaxPooling2D(pool_size=(2, 2)))
 
-	# # Second hidden layer. 15 feature maps of size 3*3. Activation function is ReLU.
-	# model.add(Conv2D(15, (3, 3), activation='relu'))
-	# # Pooling layer of size 2*2
-	# model.add(MaxPooling2D(pool_size=(2, 2)))
+	# Second hidden layer. 15 feature maps of size 3*3. Activation function is ReLU.
+	model.add(Conv2D(15, (3, 3), activation='relu'))
+	# Pooling layer of size 2*2
+	model.add(MaxPooling2D(pool_size=(2, 2)))
 
-	# # Third hidden layer. 5 feature maps of size 2*2. Activation function is ReLU.
-	# model.add(Conv2D(5, (2, 2), iactivation='relu'))
-	# # Pooling layer of size 2*2
-	# model.add(MaxPooling2D(pool_size=(2, 2)))
+	# Third hidden layer. 5 feature maps of size 2*2. Activation function is ReLU.
+	model.add(Conv2D(5, (2, 2), activation='relu'))
+	# Pooling layer of size 2*2
+	model.add(MaxPooling2D(pool_size=(2, 2)))
 
 	# Regularization layer. Randomly excludes 20% of neurons in the layer to reduce overfitting
 	model.add(Dropout(0.2))
